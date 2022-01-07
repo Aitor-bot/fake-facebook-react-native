@@ -4,6 +4,8 @@ import styled from 'styled-components/native'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import fakeStories from '../data/fakeStories';
 import Avatar from './Avatar';
+import * as Animations from '../animations/storyAnimations'
+import Animated from 'react-native-reanimated';
 
 const Container = styled.View`
     width: 100%;
@@ -83,9 +85,10 @@ const UserCardFooter = styled.View`
     position: absolute;
     width: 100%;
     height: 35%;
-    background: ${(props => props.profile ? '#FFFFFF' : 'rgba(255, 255, 255, 0)')};
     top: 130px;
     left: 0px;
+    background: ${(props => props.profile ? '#FFFFFF' : 'rgba(255, 255, 255, 0)')};
+
 `
 
 const UserOnCard = styled.View`
