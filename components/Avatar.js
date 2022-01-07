@@ -28,7 +28,7 @@ const UserActive = styled.View`
 `
 
 
-const Avatar = ({source, online, story, checked}) => {
+const Avatar = ({source, online}) => {
     return (
         <Container>
             <ProfileImage source={source}/>

@@ -11,7 +11,7 @@ const Container = styled.View`
     flex-direction: row;
     align-items: center;
     background: #FFFFFF;
-`;
+`
 
 const Room = styled.TouchableOpacity`
     width: 100%;
@@ -22,37 +22,33 @@ const Room = styled.TouchableOpacity`
     border-radius: 20px;
     padding: 0 15px;
     margin-right: 12px;
-`;
+`
 
 const Text = styled.Text`
     color: #1777ff;
     font-size: 12px;
     padding-left: 6px;
-`;
+`
 
 const User = styled.View`
     margin-right: 12px;
-`;
+`
 
 
 const Users = () =>{
     return(
         <Container>
             <ScrollView
+                horizontal
+                showsHorizontalScrollIndicator={false}
                 style={{paddingLeft: 12}}
             >
             <Room>
                 <MaterialCommunityIcons name='video-plus' size={26} color="#A748EE" />
                 <Text>Crear Sala</Text>
             </Room>
-            </ScrollView>
-            <ScrollView
-                horizontal
-                showsHorizontalScrollIndicator={false}
-                style={{paddingLeft: 12}}
-            >
             {fakeUsers.map((elem, i) =>{
-                return(
+                return ( 
                     <User key={i.toString()}>
                         <Avatar source={elem.source} online={elem.online} />
                     </User>
