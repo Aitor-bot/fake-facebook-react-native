@@ -1,8 +1,9 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 import { StatusBar, ScrollView } from 'react-native';
-
-import Header from './components/Header';
+import { NavigationContainer } from '@react-navigation/native';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import { MaterialCommunityIcons } from '@expo/vector-icons'
 
 import Home from './screens/Home';
 import Friends from './screens/Friends'
@@ -11,23 +12,20 @@ import Profile from './screens/Profile'
 import Notifications from './screens/Notifications'
 import Menu from './screens/Menu'
 
-import { NavigationContainer } from '@react-navigation/native';
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import { MaterialCommunityIcons } from '@expo/vector-icons'
-
+import Header from './components/Header'
 
 const Tab = createMaterialTopTabNavigator()
 
 const App = () => {
-  return (
+  return(
     <>
     <StatusBar
       backgroundColor="#FFFFFF"
       barStyle='dark-content'
     />
-    <ScrollView>
+    <ScrollView contentContainerStyle={{flexGrow: 1}}>
       <Header />
-      <NavigationContainer>
+    <NavigationContainer>
       <Tab.Navigator
         screenOptions={({ route }) => ({
           swipeEnabled: true,
@@ -55,11 +53,8 @@ const App = () => {
       <Tab.Screen name='Menu' component={Menu} />
       </Tab.Navigator>
     </NavigationContainer>
-
     </ScrollView>
     </>
-    );
-  }
-
+  )
+}
 export default App
-
