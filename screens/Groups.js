@@ -11,7 +11,7 @@ const View = styled.View`
 const Groups = () => {
     return(
         <View>
-            <Text>Screen</Text>
+            <Text>Groups Screen</Text>
         </View>
     )
 }

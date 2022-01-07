@@ -11,7 +11,7 @@ const View = styled.View`
 const Profile = () => {
     return(
         <View>
-            <Text>Screen</Text>
+            <Text>Profile Screen</Text>
         </View>
     )
 }

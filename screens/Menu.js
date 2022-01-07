@@ -11,7 +11,7 @@ const View = styled.View`
 const Menu = () => {
     return(
         <View>
-            <Text>Screen</Text>
+            <Text> Menu Screen</Text>
         </View>
     )
 }
