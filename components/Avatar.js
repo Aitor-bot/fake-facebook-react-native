@@ -26,12 +26,10 @@ const UserActive = styled.View`
     background: #10D24b;
     border: 2px solid #FFFFFF;
 `
-
-
-const Avatar = ({source, online}) => {
-    return (
+const Avatar = ({source, online, story, checked}) => {
+    return(
         <Container>
-            <ProfileImage source={source}/>
+            <ProfileImage source={source} story={story} checked={checked}/>
             {online && <UserActive />}
         </Container>
     )
