@@ -1,16 +1,18 @@
 import React from 'react'
 import { Text } from 'react-native'
 import styled from 'styled-components/native'
+import MainSeparator from '../components/MainSeparator';
+import ToolBar from '../components/ToolBar';
 
 const View = styled.View`
-    align-items: center;
-    height: 500;
+    flex: 1;
 `;
 
 const Home = () => {
     return(
         <View>
-            <Text>Screen</Text>
+            <ToolBar/>
+            <MainSeparator />
         </View>
     )
 }
