@@ -1,5 +1,5 @@
 import React from 'react'
-import { View } from 'react-native'
+import { Text, View } from 'react-native'
 import styled from 'styled-components/native'
 import Avatar from '../components/Avatar'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
@@ -8,7 +8,8 @@ import MainSeparator from '../components/MainSeparator'
 
 
 const Container = styled.View`
-    background-color: #add8e6
+    background-color: rgba(45, 85, 255, 0.2);
+
 
 `
 const Header = styled.View`
@@ -89,15 +90,14 @@ const Icon = styled.View`
 `
 
 const Text = styled.Text`
-
 `
-
 
 const Notifications = () => {
     return (
         <>
         {notifications.map((user, i) =>{
             return(
+                
                 <Container key={i.toString()}>
                     <Header>
                         <Row>
