@@ -89,8 +89,7 @@ const Icon = styled.View`
     margin-right: 6px;
 `
 
-const Text = styled.Text`
-`
+
 
 const Notifications = () => {
     return (
