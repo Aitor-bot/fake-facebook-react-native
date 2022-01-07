@@ -8,6 +8,7 @@ import MainSeparator from '../components/MainSeparator'
 
 
 const Container = styled.View`
+    background-color: #add8e6
 
 `
 const Header = styled.View`
@@ -84,7 +85,7 @@ const Buttom = styled.TouchableOpacity`
 `
 
 const Icon = styled.View`
-
+    margin-right: 6px;
 `
 
 const Text = styled.Text`
@@ -109,7 +110,7 @@ const Notifications = () => {
                                 <PostContent>{user.postContent}</PostContent>
                             </View>
                         </Row>
-
+                        <MaterialCommunityIcons name='dots-horizontal' size={20} color='#747476' />
                     </Header>
 
                     <Footer>
